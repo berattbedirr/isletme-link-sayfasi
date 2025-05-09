@@ -1,0 +1,49 @@
+private void CreateHtmlPage()
+{
+    string htmlContent = @"
+    <!DOCTYPE html>
+    <html lang='tr'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>İşletme Link Sayfası</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f8f8f8;
+                text-align: center;
+                padding: 40px;
+            }
+            h1 {
+                color: #333;
+            }
+            .button {
+                display: block;
+                width: 80%;
+                margin: 15px auto;
+                padding: 15px;
+                font-size: 18px;
+                background-color: #1e88e5;
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+                transition: 0.3s;
+            }
+            .button:hover {
+                background-color: #1565c0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hoş Geldiniz!</h1>
+        <p>Bizi sosyal medyada takip edin ve menümüze göz atın:</p>
+        <a class='button' href='https://www.instagram.com/seninhesabin' target='_blank'>📷 Instagram</a>
+        <a class='button' href='https://www.tiktok.com/@seninhesabin' target='_blank'>🎵 TikTok</a>
+        <a class='button' href='https://www.siten.com/menumuz.pdf' target='_blank'>📋 Menüyü Görüntüle (PDF)</a>
+    </body>
+    </html>";
+
+    // HTML içeriğini dosyaya kaydet
+    string path = "C:\\path_to_save\\link_page.html";
+    File.WriteAllText(path, htmlContent);
+}
